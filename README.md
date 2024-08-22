@@ -23,7 +23,8 @@ The **WeatherWise** project is a modern mobile application designed to provide u
 ## Features
 
 - **Live weather info**
-- **Hourly forecast for 48 hours**
+- **Live weather News**
+- **Hourly forecast for 24 hours**
 - **Daily forecast for 7 days**
 - **Weather news updates**
 - **Cross-platform compatibility**
@@ -42,17 +43,6 @@ The **WeatherWise** project is a modern mobile application designed to provide u
 | Gradient To Color    | #EF63E6    |
 | Active Text Color    | #FFFFFF    |
 | Inactive Text Color  | #BDBDBD    |
-
-### Light Theme
-| Color                | Hex        |
-|----------------------|------------|
-| Primary Color        | #FFFFFF    |
-| Secondary Color      | #EDF6F9    |
-| Gradient From Color  | #F3F3F3    |
-| Gradient To Color    | #EDF6F9    |
-| Active Text Color    | #000000    |
-| Inactive Text Color  | #757575    |
-| Icon Color           | #007AD9    |
 
 ## Fonts
 
@@ -101,7 +91,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [GP
 
 ## Support
 
-For support, Email: m.aliud@outlook.com
+For support, Email: waqaszafar771@gmail.com
 
 ## 🔗 Links
 
