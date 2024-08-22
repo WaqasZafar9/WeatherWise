@@ -69,21 +69,31 @@ class WeatherScreen extends ConsumerWidget {
             const SizedBox(height: 40),
 
             // Today Daily Forecast
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Today',
                   style: TextStyle(
                     fontSize: 20,
                     color: AppColors.white,
                   ),
                 ),
-                InkWell(
-                  child: Text(
-                    'View full report',
-                    style: TextStyle(
-                      color: AppColors.lightBlue,
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed('/details');
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white, // Button color
+                      shape: CircleBorder(), // Circular shape
+                      elevation: 6, // Shadow elevation
+                      padding: EdgeInsets.all(20), // Adjust size as needed
+                    ),
+                    child: Icon(
+                      Icons.near_me_sharp,
+                      color: AppColors.darkBlue,
+                      size: 30,
                     ),
                   ),
                 ),
@@ -92,8 +102,28 @@ class WeatherScreen extends ConsumerWidget {
 
             const SizedBox(height: 15),
 
-            // hourly forcast
+            // Hourly forecast
             const HourlyForecastView(),
+            const SizedBox(height: 10),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/details');
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.darkBlue, // Button color
+                  elevation: 6, // Shadow elevation
+                  padding: EdgeInsets.all(20), // Adjust size as needed
+                ),
+                child: Text(
+                  'Forecast Report in Detail', style: TextStyle(
+                  color: AppColors.white,
+                  fontSize: 30,
+                ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
           ],
         );
       },

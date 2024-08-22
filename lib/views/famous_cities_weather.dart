@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '/models/famous_city.dart';
 import '/screens/weather_detail_screen.dart';
 import '/widgets/city_weather_tile.dart';

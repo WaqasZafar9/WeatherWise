@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     // Navigate to the next screen after 8 seconds
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(seconds: 8), () {
+      Future.delayed(const Duration(seconds: 5), () {
         Navigator.of(context).pushReplacementNamed('/home');
       });
     });

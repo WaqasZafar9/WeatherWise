@@ -24,26 +24,23 @@ class CityWeatherTile extends ConsumerWidget {
     return currentWeather.when(
       data: (weather) {
         return Padding(
-          padding: const EdgeInsets.all(
-            0.0,
-          ),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0), // Adjusted padding
           child: Material(
             color: index == 0 ? AppColors.lightBlue : AppColors.accentBlue,
             elevation: index == 0 ? 12 : 0,
             borderRadius: BorderRadius.circular(25.0),
             child: Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 24,
+                horizontal: 16.0,
+                vertical: 20.0, // Adjusted vertical padding
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.min, // Minimize height to fit content
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Row 1
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,18 +59,18 @@ class CityWeatherTile extends ConsumerWidget {
                           ],
                         ),
                       ),
-                      // Row 2
                       Image.asset(
                         getWeatherIcon(weatherCode: weather.weather[0].id),
                         width: 50,
                       ),
                     ],
                   ),
+                  const SizedBox(height: 8), // Adjusted space between rows
                   Text(
                     weather.name,
                     style: TextStyle(
                       fontSize: 18,
-                      color: Colors.white.withOpacity(.8),
+                      color: Colors.white.withOpacity(0.8),
                       fontWeight: FontWeight.w400,
                     ),
                   ),

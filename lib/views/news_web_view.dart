@@ -11,21 +11,44 @@ class NewsWebView extends StatefulWidget {
 }
 
 class _NewsWebViewState extends State<NewsWebView> {
+  final flutterWebviewPlugin = FlutterWebviewPlugin();
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged state) {
+      if (state.type == WebViewState.finishLoad) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blueAccent[800],
         title: const Text("News"),
       ),
-      body: WebviewScaffold(
-        url: widget.url,
-
-        withZoom: true,
-        withLocalStorage: true,
-        withJavascript: true,
-        hidden: true,
-        initialChild: Center(child: CircularProgressIndicator()), // Display while loading
+      body: Stack(
+        children: [
+          WebviewScaffold(
+            url: widget.url,
+            withZoom: true,
+            withLocalStorage: true,
+            withJavascript: true,
+            hidden: true,
+            initialChild: Center(child: CircularProgressIndicator()), // Display while loading
+          ),
+          if (_isLoading)
+            const Center(
+              child: CircularProgressIndicator(),
+            ),
+        ],
       ),
     );
   }
