@@ -9,7 +9,20 @@ The **WeatherWise** project is a modern mobile application designed to provide u
 
 - **Client**: Flutter, Dart
 
-- **Pub Packages**: geocoding, geolocator, http, intl
+- **Pub Packages**: 
+- cupertino_icons: ^1.0.6
+  dio: ^5.6.0
+  flutter_riverpod: ^2.5.1
+  jiffy: ^6.3.1
+  geolocator: ^13.0.1
+  google_fonts: ^6.2.1
+  news_api_flutter_package: ^1.2.0
+  flutter_webview_plugin: ^0.4.0
+  http: ^1.2.2
+  geocoding: ^3.0.0
+  intl: ^0.19.0
+  webview_flutter: ^4.8.0
+  flutter_inappwebview: ^6.0.0
 
 ## API References
 
