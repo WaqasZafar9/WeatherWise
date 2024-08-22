@@ -66,7 +66,7 @@ The **WeatherWise** project is a modern mobile application designed to provide u
 ## Installation
 
 ```bash
-git clone "https://github.com/Maliud/weather-app-flutter-main.git"
+git clone "https://github.com/WaqasZafar9/WeatherWise.git"
 cd Weather-App-Flutter-main
 ```
 
